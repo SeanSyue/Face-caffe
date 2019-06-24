@@ -55,7 +55,7 @@ TEST_SRCS := $(filter-out $(TEST_MAIN_SRC), $(TEST_SRCS))
 TEST_CU_SRCS := $(shell find src/$(PROJECT) -name "test_*.cu")
 GTEST_SRC := src/gtest/gtest-all.cpp
 # TOOL_SRCS are the source files for the tool binaries
-TOOL_SRCS := $(shell find tools -name "*.cpp")
+TOOL_SRCS := $(shell find tools -maxdepth 1 -name "*.cpp")
 # EXAMPLE_SRCS are the source files for the example binaries
 EXAMPLE_SRCS := $(shell find examples -name "*.cpp")
 # BUILD_INCLUDE_DIR contains any generated header files we want to include.
@@ -76,6 +76,7 @@ NONGEN_CXX_SRCS := $(shell find \
 	matlab/+$(PROJECT)/private \
 	examples \
 	tools \
+	-maxdepth 1 \
 	-name "*.cpp" -or -name "*.hpp" -or -name "*.cu" -or -name "*.cuh")
 LINT_SCRIPT := scripts/cpp_lint.py
 LINT_OUTPUT_DIR := $(BUILD_DIR)/.lint
@@ -239,6 +240,8 @@ DOXYGEN_SOURCES := $(shell find \
 	matlab/ \
 	examples \
 	tools \
+	tools/extra \
+	-maxdepth 1 \
 	-name "*.cpp" -or -name "*.hpp" -or -name "*.cu" -or -name "*.cuh" -or \
         -name "*.py" -or -name "*.m")
 DOXYGEN_SOURCES += $(DOXYGEN_CONFIG_FILE)
