@@ -1,0 +1,15 @@
+[submodule "third-party/LM-Softmax"]
+	path = third-party/LM-Softmax
+	url = https://github.com/wy1iu/LargeMargin_Softmax_Loss.git
+[submodule "third-party/Sphereface"]
+	path = third-party/Sphereface
+	url = https://github.com/wy1iu/sphereface.git
+[submodule "third-party/AM-Softmax"]
+	path = third-party/AM-Softmax
+	url = https://github.com/happynear/AMSoftmax.git
+[submodule "third-party/Normface"]
+	path = third-party/Normface
+	url = https://github.com/happynear/NormFace.git
+[submodule "third-party/Center-Loss"]
+	path = third-party/Center-Loss
+	url = https://github.com/ydwen/caffe-face.git
