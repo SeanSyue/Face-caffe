@@ -97,7 +97,6 @@ PYTHON_LIB := /usr/lib
 THIRD_PARTY_DIRS := third-party/AM-Softmax/Caffe-AM-Softmax
 THIRD_PARTY_CXX_SRCS := $(shell find $(THIRD_PARTY_DIRS)/src/$(PROJECT) -name "*margin_inner_product_layer.cpp")
 THIRD_PARTY_CU_SRCS := $(shell find $(THIRD_PARTY_DIRS)/src/$(PROJECT) -name "*margin_inner_product_layer.cu")
-THIRD_PARTY_INCLUDE_DIRS += $(THIRD_PARTY_DIRS)/include
 
 # Whatever else you find you need goes here.
 INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include

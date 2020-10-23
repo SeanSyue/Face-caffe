@@ -422,9 +422,9 @@ message LayerParameter {
   optional TileParameter tile_param = 138;
   optional WindowDataParameter window_data_param = 129;
   // customized layers
-  optional BNParameter bn_param = 201;
-  optional LargeMarginInnerProductParameter largemargin_inner_product_param = 202;
-  optional MarginInnerProductParameter margin_inner_product_param = 203;
+  optional BNParameter bn_param = 200;
+  optional LargeMarginInnerProductParameter largemargin_inner_product_param = 227;
+  optional MarginInnerProductParameter margin_inner_product_param = 232;
 }
 
 // Message that stores parameters used to apply transformation
