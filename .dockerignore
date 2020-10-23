@@ -1,3 +1,5 @@
 Dockerfile
 .dockerignore
 .vscode
+third-party
+!third-party/AM-Softmax/Caffe-AM-Softmax/src/caffe/layers
